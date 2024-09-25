@@ -1,0 +1,6 @@
+00:25:58 Worker rq:worker:7f5830bfa0824f6eb0c925075bb38f79 started with PID 20270, version 1.16.2
+00:25:58 Subscribing to channel rq:pubsub:7f5830bfa0824f6eb0c925075bb38f79
+00:25:58 *** Listening on 1,2...
+00:25:58 Cleaning registries for queue: 1,2
+00:33:54 Worker 7f5830bfa0824f6eb0c925075bb38f79 [PID 20270]: warm shut down requested
+00:33:54 Unsubscribing from channel rq:pubsub:7f5830bfa0824f6eb0c925075bb38f79

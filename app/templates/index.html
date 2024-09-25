@@ -1,0 +1,53 @@
+<!-- app/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DLP Система</title>
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5">Добро пожаловать в DLP Систему</h1>
+
+        <!-- Отображение сообщений Flash -->
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="alert alert-info" role="alert">
+              {% for message in messages %}
+                <p>{{ message }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <!-- Кнопки навигации -->
+        <div class="mt-4">
+            <a href="{{ url_for('add_host') }}" class="btn btn-success">Добавить хост</a>
+            <a href="{{ url_for('view_inventory') }}" class="btn btn-primary">Просмотреть инвентарь</a>
+            <a href="{{ url_for('run_task') }}" class="btn btn-secondary">Запустить Ansible-плейбук</a>
+        </div>
+
+        <!-- Остальные функции -->
+        <!-- Форма для блокировки IP-адреса -->
+        <h2 class="mt-5">Блокировка IP-адреса</h2>
+        <form action="{{ url_for('block_ip') }}" method="post">
+            {{ block_ip_form.hidden_tag() }}
+            <div class="form-group">
+                {{ block_ip_form.ip_address.label }}
+                {{ block_ip_form.ip_address(class="form-control") }}
+            </div>
+            {{ block_ip_form.submit(class="btn btn-danger") }}
+        </form>
+
+        <!-- Дополнительные разделы можно добавить здесь -->
+    </div>
+
+    <!-- Подключаем Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!-- app/templates/task_status.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Статус задачи</title>
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5">Результат выполнения задачи</h1>
+        {% if result == 0 %}
+            <div class="alert alert-success" role="alert">
+                Задача выполнена успешно.
+            </div>
+        {% else %}
+            <div class="alert alert-danger" role="alert">
+                Произошла ошибка при выполнении задачи.
+            </div>
+        {% endif %}
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Вернуться на главную страницу</a>
+    </div>
+
+    <!-- Подключаем Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</body>
+</html>
+

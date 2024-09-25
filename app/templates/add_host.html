@@ -1,0 +1,69 @@
+<!-- app/templates/add_host.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить хост</title>
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5">Добавить хост</h1>
+
+        <!-- Отображение сообщений Flash -->
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="alert alert-info" role="alert">
+              {% for message in messages %}
+                <p>{{ message }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('add_host') }}" method="post">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.hostname.label }}
+                {{ form.hostname(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.username.label }}
+                {{ form.username(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.use_password(class="form-check-input") }} {{ form.use_password.label }}
+            </div>
+            <div class="form-group" id="password_field" style="display:none;">
+                {{ form.password.label }}
+                {{ form.password(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-success") }}
+        </form>
+
+        <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">На главную</a>
+    </div>
+
+    <!-- Подключаем Bootstrap JS и jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script>
+        // Показываем или скрываем поле пароля
+        function togglePasswordField() {
+            var usePassword = document.getElementById('use_password');
+            var passwordField = document.getElementById('password_field');
+            if (usePassword.checked) {
+                passwordField.style.display = 'block';
+            } else {
+                passwordField.style.display = 'none';
+            }
+        }
+        document.getElementById('use_password').addEventListener('change', togglePasswordField);
+        // Инициализация
+        togglePasswordField();
+    </script>
+</body>
+</html>
+

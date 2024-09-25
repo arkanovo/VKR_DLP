@@ -1,0 +1,47 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 108-681-796
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:28:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:28:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:28:32] "[32mPOST /add_host HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:28:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 108-681-796
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:55:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:55:12] "GET /inventory HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:55:16] "[32mGET /check_host/192.168.1.1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:55:16] "GET /inventory HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:55:19] "[32mGET /clear_inventory HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:55:19] "GET /inventory HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:55:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:55:26] "GET /add_host HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:57:37] "[32mPOST /add_host HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:57:37] "GET /inventory HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:57:44] "[32mGET /check_host/192.168.1.16 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:57:44] "GET /inventory HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:57:51] "[32mGET /check_host/192.168.1.16 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 00:57:51] "GET /inventory HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 108-681-796
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:06:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:06:42] "GET /inventory HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:06:49] "[32mGET /remove_host/temp_hosts.ini HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:06:49] "GET /inventory HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:06:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:06:52] "GET /add_host HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:07:07] "[32mPOST /add_host HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:07:07] "GET /inventory HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:07:10] "[32mGET /check_host/192.168.1.16,192.168.1.16 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:07:10] "GET /inventory HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Sep/2024 01:07:15] "[33mGET /check_host/temp_inventory/temp_hosts.ini HTTP/1.1[0m" 404 -

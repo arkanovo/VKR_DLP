@@ -1,0 +1,9 @@
+
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Установить авторизованный ключ для пользователя
+      authorized_key:
+        user: sa
+        state: present
+        key: "{{ lookup('file', '~/dlp.pub') }}"
